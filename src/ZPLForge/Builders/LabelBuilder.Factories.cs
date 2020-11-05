@@ -1,4 +1,5 @@
-﻿using ZPLForge.Common;
+﻿using ZPLForge.Builders.Presets;
+using ZPLForge.Common;
 
 namespace ZPLForge.Builders
 {
@@ -6,35 +7,20 @@ namespace ZPLForge.Builders
     {
         public static LabelBuilder FromContinuousMedia(int printWidth, int labelLength, PrintMode? printMode = null, MediaType? mediaType = null)
         {
-            var builder = new LabelBuilder();
-            builder.Context.MediaTracking = MediaTracking.ContinuousVariableLength;
-            builder.Context.PrintWidth = printWidth;
-            builder.Context.MediaLength = labelLength;
-            builder.Context.MediaType = mediaType;
-            builder.Context.PrintMode = printMode;
-            return builder;
+            var preset = new ContinuousPreset(printWidth, labelLength, printMode, mediaType);
+            return new LabelBuilder(preset);
         }
 
         public static LabelBuilder FromCuttedContinuousMedia(int printWidth, int labelLength, MediaType? mediaType = null)
         {
-            var builder = new LabelBuilder();
-            builder.Context.MediaTracking = MediaTracking.ContinuousVariableLength;
-            builder.Context.PrintWidth = printWidth;
-            builder.Context.MediaLength = labelLength;
-            builder.Context.MediaType = mediaType;
-            builder.Context.PrintMode = PrintMode.Cutter;
-            return builder;
+            var preset = new ContinuousPreset(printWidth, labelLength, PrintMode.Cutter, mediaType);
+            return new LabelBuilder(preset);
         }
 
         public static LabelBuilder FromBlackMarkSensingMedia(int printWidth, int blackMarkOffset, PrintMode? printMode = null, MediaType? mediaType = null)
         {
-            var builder = new LabelBuilder();
-            builder.Context.MediaTracking = MediaTracking.MarkSensing;
-            builder.Context.PrintWidth = printWidth;
-            builder.Context.BlackMarkOffset = blackMarkOffset;
-            builder.Context.MediaType = mediaType;
-            builder.Context.PrintMode = printMode;
-            return builder;
+            var preset = new BlackMarkSensingPreset(printWidth, blackMarkOffset, printMode, mediaType);
+            return new LabelBuilder(preset);
         }
 
         /// <summary>
@@ -45,12 +31,8 @@ namespace ZPLForge.Builders
         /// <returns></returns>
         public static LabelBuilder FromWebSensingMedia(int printWidth, PrintMode? printMode = null, MediaType? mediaType = null)
         {
-            var builder = new LabelBuilder();
-            builder.Context.MediaTracking = MediaTracking.WebSensing;
-            builder.Context.PrintWidth = printWidth;
-            builder.Context.MediaType = mediaType;
-            builder.Context.PrintMode = printMode;
-            return builder;
+            var preset = new WebSensingPreset(printWidth, printMode, mediaType);
+            return new LabelBuilder(preset);
         }
     }
 }

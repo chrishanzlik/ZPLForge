@@ -1,4 +1,5 @@
-﻿using ZPLForge.Common;
+﻿using System;
+using ZPLForge.Common;
 
 namespace ZPLForge.Builders
 {
@@ -30,6 +31,16 @@ namespace ZPLForge.Builders
         public LabelBuilder InvertColors()
         {
             Context.ReversePrintingColors = true;
+
+            return this;
+        }
+
+        public LabelBuilder AdjustDarknessLevel(int relativeAdjustment)
+        {
+            if (relativeAdjustment > 30) relativeAdjustment = 30;
+            if (relativeAdjustment < -30) relativeAdjustment = -30;
+
+            Context.MediaDarknessLevel = relativeAdjustment;
 
             return this;
         }

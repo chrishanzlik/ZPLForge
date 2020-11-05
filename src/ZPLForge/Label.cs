@@ -51,6 +51,7 @@ namespace ZPLForge
         public bool OverridePauseCount { get; set; }
         public int ReplicatesOfEachSerialNumber { get; set; }
         public bool CutOnError { get; set; }
+        public int? MediaDarknessLevel { get; set; }
 
         public static implicit operator string(Label label) => label.ToString();
 
@@ -80,6 +81,9 @@ namespace ZPLForge
 
             if (PrintMode.HasValue)
                 builder.Append(ZPLCommand.MM(PrintMode.Value));
+
+            if (MediaDarknessLevel.HasValue)
+                builder.Append(ZPLCommand.MD(MediaDarknessLevel.Value));
 
             if (ReversePrintingColors)
                 builder.Append(ZPLCommand.LR(true));

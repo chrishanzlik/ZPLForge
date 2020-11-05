@@ -76,6 +76,9 @@ namespace ZPLForge.Commands
         public static ZPLCommand LR(bool reversePrint)
             => new ZPLCommand("^LR", reversePrint ? 'Y' : 'N');
 
+        public static ZPLCommand MD(int darknessLevel)
+            => new ZPLCommand("^MD", darknessLevel);
+
         public static ZPLCommand MM(PrintMode printMode)
             => new ZPLCommand("^MM", (char)printMode);
 

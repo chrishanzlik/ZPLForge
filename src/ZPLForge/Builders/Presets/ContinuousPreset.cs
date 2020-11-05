@@ -28,7 +28,7 @@ namespace ZPLForge.Builders.Presets
             label.MediaType = MediaType;
             label.MediaLength = LabelLength;
             label.PrintMode = PrintMode;
-            label.MediaTracking = MediaTracking.ContinuousVariableLength;
+            label.MediaTracking = MediaTracking.Continuous;
         }
     }
 }

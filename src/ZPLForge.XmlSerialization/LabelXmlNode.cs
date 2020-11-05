@@ -117,8 +117,17 @@ namespace ZPLForge.XmlSerialization
 
         [XmlElement]
         public int PauseAndCutValue { get; set; }
+
+        [XmlElement]
         public int ReplicatesOfEachSerialNumber { get; set; }
+
+        [XmlElement]
         public bool CutOnError { get; set; }
+
+        [XmlElement]
+        public int? MediaDarknessLevel { get; set; }
+
+
 
         [EditorBrowsable(EditorBrowsableState.Never)]
         public bool ShouldSerializePauseAndCutValue() =>
@@ -144,6 +153,11 @@ namespace ZPLForge.XmlSerialization
         public bool ShouldSerializePrintMode() =>
             SerializeDefaults
             || PrintMode.HasValue;
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public bool ShouldSerializeMediaDarknessLevel() =>
+            SerializeDefaults
+            || MediaDarknessLevel.HasValue;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
         public bool ShouldSerializeBackfeedSpeedString() =>

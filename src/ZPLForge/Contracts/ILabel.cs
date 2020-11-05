@@ -32,5 +32,6 @@ namespace ZPLForge.Contracts
         bool OverridePauseCount { get; set; }
         int ReplicatesOfEachSerialNumber { get; set; }
         bool CutOnError { get; set; }
+        int? MediaDarknessLevel { get; set; }
     }
 }

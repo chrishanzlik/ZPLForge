@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using ZPLForge.Common;
 using ZPLForge.Contracts;
 
-namespace ZPLForge.Builders.Presets
+namespace ZPLForge.Presets
 {
-    public class BlackMarkSensingPreset : ILabelPreset
+    public class WebSensingPreset : ILabelPreset
     {
-        public BlackMarkSensingPreset(int printWidth, int blackMarkOffset, PrintMode? printMode, MediaType? mediaType)
+        public WebSensingPreset(int printWidth, PrintMode? printMode, MediaType? mediaType)
         {
             PrintWidth = printWidth;
-            BlackMarkOffset = blackMarkOffset;
             PrintMode = printMode;
             MediaType = mediaType;
         }
 
         public int PrintWidth { get; }
-        public int BlackMarkOffset { get; set; }
         public PrintMode? PrintMode { get; }
         public MediaType? MediaType { get; }
 
@@ -29,8 +25,7 @@ namespace ZPLForge.Builders.Presets
             label.PrintWidth = PrintWidth;
             label.PrintMode = PrintMode;
             label.MediaType = MediaType;
-            label.BlackMarkOffset = BlackMarkOffset;
-            label.MediaTracking = MediaTracking.MarkSensing;
+            label.MediaTracking = MediaTracking.WebSensing;
         }
     }
 }

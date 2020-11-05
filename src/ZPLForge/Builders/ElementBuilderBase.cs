@@ -1,6 +1,6 @@
 ﻿using ZPLForge.Common;
 
-namespace ZPLForge.Builders.Abstractions
+namespace ZPLForge.Builders
 {
     /// <summary>
     /// Base class for all elements (label content)

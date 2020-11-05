@@ -2,7 +2,7 @@
 using ZPLForge.Common;
 using ZPLForge.Contracts;
 
-namespace ZPLForge.Builders.Presets
+namespace ZPLForge.Presets
 {
     public class ContinuousPreset : ILabelPreset
     {

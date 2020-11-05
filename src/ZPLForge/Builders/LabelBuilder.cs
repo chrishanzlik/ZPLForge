@@ -1,6 +1,5 @@
 ﻿using System;
-using ZPLForge.Builders.Abstractions;
-using ZPLForge.Builders.Presets;
+using ZPLForge.Presets;
 
 namespace ZPLForge.Builders
 {

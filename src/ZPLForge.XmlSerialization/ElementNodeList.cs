@@ -6,7 +6,6 @@ using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 using ZPLForge.Contracts;
-using ZPLForge.XmlSerialization.Helpers;
 
 namespace ZPLForge.XmlSerialization
 {

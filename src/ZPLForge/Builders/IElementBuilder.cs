@@ -1,4 +1,4 @@
-﻿namespace ZPLForge.Builders.Abstractions
+﻿namespace ZPLForge.Builders
 {
     /// <summary>
     /// Element builder contract

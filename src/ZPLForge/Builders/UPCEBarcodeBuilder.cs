@@ -1,5 +1,4 @@
 ﻿using System;
-using ZPLForge.Builders.Abstractions;
 using ZPLForge.Common;
 
 namespace ZPLForge.Builders

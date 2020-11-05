@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using ZPLForge.Builders;
-using ZPLForge.Builders.Abstractions;
 
 namespace ZPLForge.Tests.Builders
 {

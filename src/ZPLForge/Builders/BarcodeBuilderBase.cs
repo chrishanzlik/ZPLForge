@@ -1,7 +1,7 @@
 ﻿using System;
 using ZPLForge.Common;
 
-namespace ZPLForge.Builders.Abstractions
+namespace ZPLForge.Builders
 {
     /// <summary>
     /// Base class for all 2D barcode elements

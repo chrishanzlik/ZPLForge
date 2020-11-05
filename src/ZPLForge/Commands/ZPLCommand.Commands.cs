@@ -5,10 +5,7 @@ namespace ZPLForge.Commands
     public sealed partial class ZPLCommand
     {
         public static ZPLCommand A(Font font, Orientation orientation, int? charHeight, int? charWidth)
-            => new ZPLCommand("^A", (char)font, (char)orientation, charHeight, charWidth);
-
-        public static ZPLCommand A(Font font, Orientation orientation, int? size)
-            => A(font, orientation, size, size.HasValue ? (int)(size.Value / 1.8) : (int?)null);
+            => new ZPLCommand("^A" + (char)font, (char)orientation, charHeight, charWidth);
 
         public static ZPLCommand B3(Orientation orientation, bool mod43checkDigit, int? height, bool printInterpretationLine, bool printInterpretationLineAbove)
             => new ZPLCommand("^B3", (char)orientation, mod43checkDigit ? 'Y' : 'N', height, printInterpretationLine ? 'Y' : 'N', printInterpretationLineAbove ? 'Y' : 'N');

@@ -35,7 +35,7 @@ namespace ZPLForge.Builders
         public TextBuilder ApplyBlockMode(int width, BlockAlignment alignment)
             => ApplyBlockMode(width, ZPLForgeDefaults.Elements.Text.BlockLines, alignment);
 
-        public TextBuilder SetFont(Font fontFamily, int charHeight, int charWidth, Orientation orientation)
+        public TextBuilder SetFont(Font fontFamily, int charHeight, int? charWidth = null, Orientation orientation = Orientation.Normal)
         {
             Context.FontStyle = fontFamily;
             Context.FontOrientation = orientation;
@@ -45,15 +45,7 @@ namespace ZPLForge.Builders
             return this;
         }
 
-        public TextBuilder SetFont(Font fontFamily, int size, Orientation orientation)
-            => SetFont(fontFamily, size, (int)(size / 1.8), orientation);
-
-
-        public TextBuilder SetFont(Font fontFamily, int size)
-            => SetFont(fontFamily, size, ZPLForgeDefaults.Elements.Text.FontOrientation);
-
-        public TextBuilder SetFont(int size)
-            => SetFont(ZPLForgeDefaults.Elements.Text.FontStyle, size);
-
+        public TextBuilder SetFont(int charHeight, int? charWidth = null, Orientation orientation = Orientation.Normal)
+            => SetFont(Font.Default, charHeight, charWidth, orientation);
     }
 }

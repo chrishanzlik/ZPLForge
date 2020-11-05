@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0-beta</Version>
+    <Authors>Christopher Hanzlik</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright (c) 2020 Christopher Hanzlik</Copyright>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/chrishanzlik/ZPLForge</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/chrishanzlik/ZPLForge</RepositoryUrl>
+	<PackageTags>ZPL Label Printing Zebra Builder ZPLForge Zebra-Programming-Langauge Pricetag Tags</PackageTags>
+	<RepositoryType>Git</RepositoryType>
+	<PackageIcon>icon.png</PackageIcon>
+	<Description>Library for generating ZPL code</Description>
+	<PackageLicenseFile></PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

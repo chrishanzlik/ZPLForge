@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZPLForge", "src\ZPLForge\ZPLForge.csproj", "{3496A8E9-DED7-439D-A280-FE747E8490B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZPLForge.XmlSerialization", "src\ZPLForge.XmlSerialization\ZPLForge.XmlSerialization.csproj", "{BD1008CC-733A-428B-8ADB-BD3AF2E371C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9C045A55-8FFA-422A-89A6-15CAAF1E9774}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1B4C5EB1-9986-4354-A14B-A5264B8952D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZPLForge.Tests", "tests\ZPLForge.Tests\ZPLForge.Tests.csproj", "{571F1A4D-80F7-4651-BB73-65486724E10A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZPLForge.XmlSerialization.Tests", "tests\ZPLForge.XmlSerialization.Tests\ZPLForge.XmlSerialization.Tests.csproj", "{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F978CA1-555B-4466-A74D-2459960EF9C9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\dotnet-core.yml = .github\workflows\dotnet-core.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3496A8E9-DED7-439D-A280-FE747E8490B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3496A8E9-DED7-439D-A280-FE747E8490B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3496A8E9-DED7-439D-A280-FE747E8490B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3496A8E9-DED7-439D-A280-FE747E8490B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1008CC-733A-428B-8ADB-BD3AF2E371C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1008CC-733A-428B-8ADB-BD3AF2E371C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1008CC-733A-428B-8ADB-BD3AF2E371C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1008CC-733A-428B-8ADB-BD3AF2E371C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571F1A4D-80F7-4651-BB73-65486724E10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571F1A4D-80F7-4651-BB73-65486724E10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571F1A4D-80F7-4651-BB73-65486724E10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571F1A4D-80F7-4651-BB73-65486724E10A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3496A8E9-DED7-439D-A280-FE747E8490B4} = {9C045A55-8FFA-422A-89A6-15CAAF1E9774}
+		{BD1008CC-733A-428B-8ADB-BD3AF2E371C1} = {9C045A55-8FFA-422A-89A6-15CAAF1E9774}
+		{571F1A4D-80F7-4651-BB73-65486724E10A} = {1B4C5EB1-9986-4354-A14B-A5264B8952D9}
+		{C0D3BFD9-C58D-473D-BA41-172BF74C7C0E} = {1B4C5EB1-9986-4354-A14B-A5264B8952D9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09DFD708-BDB1-4EC5-A4EE-E08514E11317}
+	EndGlobalSection
+EndGlobal

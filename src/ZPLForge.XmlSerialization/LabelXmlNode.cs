@@ -40,16 +40,19 @@ namespace ZPLForge.XmlSerialization
         public string Version { get; set; }
 
         [XmlElement]
-        public int? MediaLength { get; set; }
-        
+        public int PositionX { get; set; }
+
         [XmlElement]
-        public MediaTracking? MediaTracking { get; set; }
+        public int PositionY { get; set; }
+
+        [XmlElement]
+        public int Quantity { get; set; }
 
         [XmlElement]
         public int? PrintWidth { get; set; }
 
         [XmlElement]
-        public PrintMode? PrintMode { get; set; }
+        public int? MediaLength { get; set; }
 
         [XmlElement]
         public int BlackMarkOffset { get; set; }
@@ -58,10 +61,13 @@ namespace ZPLForge.XmlSerialization
         public bool ReversePrintingColors { get; set; }
 
         [XmlElement]
-        public int Quantity { get; set; }
+        public bool OverridePauseCount { get; set; }
 
         [XmlElement]
-        public bool OverridePauseCount { get; set; }
+        public MediaTracking? MediaTracking { get; set; }
+
+        [XmlElement]
+        public PrintMode? PrintMode { get; set; }
 
         [XmlElement]
         public ZebraEncoding Encoding { get; set; }
@@ -102,6 +108,17 @@ namespace ZPLForge.XmlSerialization
         [XmlElement]
         public MediaType? MediaType { get; set; }
 
+        [XmlElement]
+        public int PauseAndCutValue { get; set; }
+
+        [XmlElement]
+        public int ReplicatesOfEachSerialNumber { get; set; }
+
+        [XmlElement]
+        public bool CutOnError { get; set; }
+
+        [XmlElement]
+        public int? MediaDarknessLevel { get; set; }
 
         [XmlIgnore]
         public List<ILabelContent> Content { get; set; }
@@ -117,23 +134,6 @@ namespace ZPLForge.XmlSerialization
             set => Content = value.Cast<ILabelContent>().ToList();
         }
 
-        [XmlElement]
-        public int PauseAndCutValue { get; set; }
-
-        [XmlElement]
-        public int ReplicatesOfEachSerialNumber { get; set; }
-
-        [XmlElement]
-        public bool CutOnError { get; set; }
-
-        [XmlElement]
-        public int? MediaDarknessLevel { get; set; }
-
-        [XmlElement]
-        public int PositionX { get; set; }
-
-        [XmlElement]
-        public int PositionY { get; set; }
 
 
 

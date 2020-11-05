@@ -67,6 +67,9 @@ namespace ZPLForge.Commands
         public static ZPLCommand GS(Orientation fieldOrientation, int? height, int? width)
             => new ZPLCommand("^GS", (char)fieldOrientation, height, width);
 
+        public static ZPLCommand LH(int positionX, int positionY)
+            => new ZPLCommand("^LH", positionX, positionY);
+
         public static ZPLCommand LL(int length)
             => new ZPLCommand("^LL", length);
 

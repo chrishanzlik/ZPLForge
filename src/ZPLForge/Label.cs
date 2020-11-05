@@ -27,9 +27,13 @@ namespace ZPLForge
             OverridePauseCount = ZPLForgeDefaults.Elements.Label.OverridePauseCount;
             ReplicatesOfEachSerialNumber = ZPLForgeDefaults.Elements.Label.ReplicatesOfEachSerialNumber;
             CutOnError = ZPLForgeDefaults.Elements.Label.CutOnError;
+            PositionX = ZPLForgeDefaults.Elements.Label.PositionX;
+            PositionY = ZPLForgeDefaults.Elements.Label.PositionY;
 
             Content = new List<ILabelContent>();
         }
+
+
 
         public int? MediaLength { get; set; }
         public MediaTracking? MediaTracking { get; set; }
@@ -52,6 +56,8 @@ namespace ZPLForge
         public int ReplicatesOfEachSerialNumber { get; set; }
         public bool CutOnError { get; set; }
         public int? MediaDarknessLevel { get; set; }
+        public int PositionX { get; set; }
+        public int PositionY { get; set; }
 
         public static implicit operator string(Label label) => label.ToString();
 
@@ -69,6 +75,7 @@ namespace ZPLForge
         StringBuilder IZplGenerator.GenerateZpl(StringBuilder builder)
         {
             builder.Append(ZPLCommand.XA());
+            builder.Append(ZPLCommand.LH(PositionX, PositionY));
 
             if (MediaLength.HasValue)
                 builder.Append(ZPLCommand.LL(MediaLength.Value));

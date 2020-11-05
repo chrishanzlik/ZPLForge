@@ -1,6 +1,6 @@
 ![logo](assets/logo.jpg)
 
-The ZPLForge library is aimed at people who do not want to deal directly with ZPL or read the
+The ZPLForge library is aimed at people who do not want to deal directly with **ZPL II** or read the
 documentation for hours. ZPLForge creates ZPL code in no time with special builders that
 guide user in easy steps.
 Another advantage is the XML serialization which comes with the

@@ -1,5 +1,4 @@
-﻿using System;
-using ZPLForge.Common;
+﻿using ZPLForge.Common;
 
 namespace ZPLForge.Builders
 {
@@ -8,6 +7,14 @@ namespace ZPLForge.Builders
         public LabelBuilder SetQuantity(int count)
         {
             Context.Quantity = count;
+
+            return this;
+        }
+
+        public LabelBuilder StartAt(int positionX, int positionY)
+        {
+            Context.PositionX = positionX;
+            Context.PositionY = positionY;
 
             return this;
         }

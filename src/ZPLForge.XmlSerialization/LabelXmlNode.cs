@@ -26,6 +26,8 @@ namespace ZPLForge.XmlSerialization
             OverridePauseCount = ZPLForgeDefaults.Elements.Label.OverridePauseCount;
             ReplicatesOfEachSerialNumber = ZPLForgeDefaults.Elements.Label.ReplicatesOfEachSerialNumber;
             CutOnError = ZPLForgeDefaults.Elements.Label.CutOnError;
+            PositionX = ZPLForgeDefaults.Elements.Label.PositionX;
+            PositionY = ZPLForgeDefaults.Elements.Label.PositionY;
 
             Content = new List<ILabelContent>();
         }
@@ -127,6 +129,12 @@ namespace ZPLForge.XmlSerialization
         [XmlElement]
         public int? MediaDarknessLevel { get; set; }
 
+        [XmlElement]
+        public int PositionX { get; set; }
+
+        [XmlElement]
+        public int PositionY { get; set; }
+
 
 
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -213,5 +221,15 @@ namespace ZPLForge.XmlSerialization
         public bool ShouldSerializeCutOnError() =>
             SerializeDefaults
             || !CutOnError.Equals(ZPLForgeDefaults.Elements.Label.CutOnError);
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public bool ShouldSerializePositionX() =>
+            SerializeDefaults
+            || !PositionX.Equals(ZPLForgeDefaults.Elements.Label.PositionX);
+
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public bool ShouldSerializePositionY() =>
+            SerializeDefaults
+            || !PositionY.Equals(ZPLForgeDefaults.Elements.Label.PositionY);
     }
 }

@@ -29,8 +29,10 @@ namespace ZPLForge
         {
             base.GenerateZpl(builder);
 
+            string fieldDataSwitches = (char)ErrorCorrection + "A,";
+
             builder.Append(ZPLCommand.BQ((int)QrModel, (int)MagnificationFactor, ErrorCorrection, MaskValue));
-            builder.Append(ZPLCommand.FDQA(Content));
+            builder.Append(ZPLCommand.FD(fieldDataSwitches + Content));
             builder.Append(ZPLCommand.FS());
 
             return builder;

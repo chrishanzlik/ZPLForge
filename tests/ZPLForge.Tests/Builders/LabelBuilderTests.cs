@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+﻿using Xunit;
 using ZPLForge.Builders;
+using ZPLForge.Common;
 
 namespace ZPLForge.Tests.Builders
 {
@@ -18,7 +16,7 @@ namespace ZPLForge.Tests.Builders
         public void LabelBuildersResetMethodResetsLabel()
         {
             var sut = LabelBuilder.FromWebSensingMedia(1)
-                .AddText(txt => txt.SetContent("hello"));
+                .AddText(new TextElement());
 
             sut.Reset();
 

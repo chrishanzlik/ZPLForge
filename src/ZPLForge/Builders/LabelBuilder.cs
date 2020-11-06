@@ -1,4 +1,5 @@
 ﻿using System;
+using ZPLForge.Common;
 using ZPLForge.Presets;
 
 namespace ZPLForge.Builders

@@ -40,9 +40,6 @@ namespace ZPLForge.Commands
         public static ZPLCommand FD(string data)
             => new ZPLCommand("^FD", data);
 
-        public static ZPLCommand FDQA(string data)
-            => new ZPLCommand("^FDQA,", data);
-
         public static ZPLCommand FO(int x, int y, FieldOrigin align)
             => new ZPLCommand("^FO", x, y, (int)align);
 

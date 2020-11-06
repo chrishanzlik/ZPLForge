@@ -122,6 +122,27 @@ namespace ZPLForge.Builders
             return BuildToContentAndReturn(builder);
         }
 
+        public LabelBuilder AddUPCABarcode(Action<UPCABarcodeBuilder> upc)
+        {
+            var builder = new UPCABarcodeBuilder();
+            upc(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
+        public LabelBuilder AddUPCEBarcode(Action<UPCEBarcodeBuilder> upc)
+        {
+            var builder = new UPCEBarcodeBuilder();
+            upc(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
+        public LabelBuilder AddCode39Barcode(Action<Code39BarcodeBuilder> code39)
+        {
+            var builder = new Code39BarcodeBuilder();
+            code39(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
         private LabelBuilder BuildToContentAndReturn<TElem>(IElementBuilder<TElem> builder)
             where TElem : LabelContent, new()
         {

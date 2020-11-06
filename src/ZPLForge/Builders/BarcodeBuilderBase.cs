@@ -4,7 +4,7 @@ using ZPLForge.Common;
 namespace ZPLForge.Builders
 {
     /// <summary>
-    /// Base class for all 2D barcode elements
+    /// Base class for all one dimensional barcode elements
     /// </summary>
     /// <typeparam name="TBuilder"></typeparam>
     public abstract class BarcodeBuilderBase<TBuilder> : ElementBuilderBase<BarcodeElement, TBuilder>

@@ -1,4 +1,4 @@
-﻿namespace ZPLForge.Builders
+﻿namespace ZPLForge.Common
 {
     /// <summary>
     /// Provide functionality to access the objects context

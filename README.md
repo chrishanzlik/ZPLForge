@@ -31,7 +31,7 @@ free of dependencies.
 - Diagonal Line
 
 ## Label builder
-Using the `LabelBuilder` is recommended, because all required properties on the labels (and its content) will be set. Additionally this brings some validation.
+Using the `LabelBuilder` is recommended, because all required properties on the label (and its content) will be set. Additionally this brings some validation.
 
 ### Example
 This example is printed on a adhesive label with a total width of 60 mm on a ZD420
@@ -61,7 +61,7 @@ Label priceLabel = LabelBuilder
         .At(100, 105)
         .SetHeight(50)
         .SetContent("123456789"))
-    .AddRectangle(circle => circle
+    .AddRectangle(rect => rect
         .At(310, 20)
         .SetDimensions(165, 60)
         .SetBorder(LabelColor.Black, 60))

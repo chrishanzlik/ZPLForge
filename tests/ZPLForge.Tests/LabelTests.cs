@@ -36,6 +36,8 @@ namespace ZPLForge.Tests
             Assert.Equal(ZPLForgeDefaults.Elements.Label.OverridePauseCount, sut.OverridePauseCount);
             Assert.Equal(ZPLForgeDefaults.Elements.Label.ReplicatesOfEachSerialNumber, sut.ReplicatesOfEachSerialNumber);
             Assert.Equal(ZPLForgeDefaults.Elements.Label.CutOnError, sut.CutOnError);
+            Assert.Equal(ZPLForgeDefaults.Elements.Label.PositionX, sut.PositionX);
+            Assert.Equal(ZPLForgeDefaults.Elements.Label.PositionY, sut.PositionY);
         }
 
         [Fact]

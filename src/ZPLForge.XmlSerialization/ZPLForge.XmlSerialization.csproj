@@ -14,13 +14,14 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/chrishanzlik/ZPLForge</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/chrishanzlik/ZPLForge</RepositoryUrl>
-	<PackageTags>ZPL Label Printing Zebra Builder ZPLForge Serialization XML</PackageTags>
+	<PackageTags>ZPL ZPL2 Label Printing Zebra Builder ZPLForge Serialization XML</PackageTags>
 	<RepositoryType>Git</RepositoryType>
 	<AssemblyVersion>1.0.0.0</AssemblyVersion>
 	<FileVersion>1.0.0.0</FileVersion>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageLicenseFile></PackageLicenseFile>
 	<Description>Library for serializing ZPL code</Description>
+	<PackageReleaseNotes>First release version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

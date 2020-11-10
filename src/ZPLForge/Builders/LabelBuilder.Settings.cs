@@ -11,6 +11,14 @@ namespace ZPLForge.Builders
             return this;
         }
 
+        public LabelBuilder StartAt(int positionX, int positionY)
+        {
+            Context.PositionX = positionX;
+            Context.PositionY = positionY;
+
+            return this;
+        }
+
         public LabelBuilder SetEncoding(ZebraEncoding encoding)
         {
             Context.Encoding = encoding;
@@ -30,6 +38,16 @@ namespace ZPLForge.Builders
         public LabelBuilder InvertColors()
         {
             Context.ReversePrintingColors = true;
+
+            return this;
+        }
+
+        public LabelBuilder AdjustDarknessLevel(int relativeAdjustment)
+        {
+            if (relativeAdjustment > 30) relativeAdjustment = 30;
+            if (relativeAdjustment < -30) relativeAdjustment = -30;
+
+            Context.MediaDarknessLevel = relativeAdjustment;
 
             return this;
         }

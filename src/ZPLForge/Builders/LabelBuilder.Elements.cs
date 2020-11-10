@@ -1,5 +1,4 @@
 ﻿using System;
-using ZPLForge.Builders.Abstractions;
 
 namespace ZPLForge.Builders
 {
@@ -120,6 +119,27 @@ namespace ZPLForge.Builders
         {
             var builder = new EAN13BarcodeBuilder();
             ean13(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
+        public LabelBuilder AddUPCABarcode(Action<UPCABarcodeBuilder> upc)
+        {
+            var builder = new UPCABarcodeBuilder();
+            upc(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
+        public LabelBuilder AddUPCEBarcode(Action<UPCEBarcodeBuilder> upc)
+        {
+            var builder = new UPCEBarcodeBuilder();
+            upc(builder);
+            return BuildToContentAndReturn(builder);
+        }
+
+        public LabelBuilder AddCode39Barcode(Action<Code39BarcodeBuilder> code39)
+        {
+            var builder = new Code39BarcodeBuilder();
+            code39(builder);
             return BuildToContentAndReturn(builder);
         }
 

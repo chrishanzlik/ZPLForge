@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0-beta</Version>
+    <Version>1.0.0</Version>
     <Authors>Christopher Hanzlik</Authors>
     <Product>ZPLForge.XmlSerialization</Product>
     <Copyright>Copyright (c) 2020 Christopher Hanzlik</Copyright>
@@ -14,13 +14,14 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/chrishanzlik/ZPLForge</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/chrishanzlik/ZPLForge</RepositoryUrl>
-	<PackageTags>ZPL Label Printing Zebra Builder ZPLForge Serialization XML</PackageTags>
+	<PackageTags>ZPL ZPL2 Label Printing Zebra Builder ZPLForge Serialization XML</PackageTags>
 	<RepositoryType>Git</RepositoryType>
 	<AssemblyVersion>1.0.0.0</AssemblyVersion>
 	<FileVersion>1.0.0.0</FileVersion>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageLicenseFile></PackageLicenseFile>
 	<Description>Library for serializing ZPL code</Description>
+	<PackageReleaseNotes>First release version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

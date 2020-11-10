@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ZPLForge.Contracts;
 
-namespace ZPLForge.XmlSerialization.Helpers
+namespace ZPLForge.XmlSerialization
 {
     internal static class MappingTable
     {

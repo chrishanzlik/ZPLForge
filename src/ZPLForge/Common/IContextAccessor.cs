@@ -1,4 +1,4 @@
-﻿namespace ZPLForge.Builders.Abstractions
+﻿namespace ZPLForge.Common
 {
     /// <summary>
     /// Provide functionality to access the objects context

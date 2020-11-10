@@ -8,6 +8,9 @@ namespace ZPLForge.Contracts
     /// </summary>
     public interface ILabel
     {
+        int PositionX { get; set; }
+        int PositionY { get; set; }
+
         int? MediaLength { get; set; }
         MediaTracking? MediaTracking { get; set; }
         int? PrintWidth { get; set; }
@@ -32,5 +35,6 @@ namespace ZPLForge.Contracts
         bool OverridePauseCount { get; set; }
         int ReplicatesOfEachSerialNumber { get; set; }
         bool CutOnError { get; set; }
+        int? MediaDarknessLevel { get; set; }
     }
 }

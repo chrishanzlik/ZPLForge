@@ -1,4 +1,6 @@
-﻿using ZPLForge.Builders.Abstractions;
+﻿using System;
+using ZPLForge.Common;
+using ZPLForge.Presets;
 
 namespace ZPLForge.Builders
 {
@@ -10,6 +12,16 @@ namespace ZPLForge.Builders
         internal LabelBuilder()
         {
             Context = new Label();
+        }
+
+        public LabelBuilder(ILabelPreset preset)
+        {
+            if (preset == null)
+                throw new ArgumentNullException(nameof(preset));
+
+            Context = new Label();
+
+            preset.Apply(Context);
         }
 
         public Label Build()

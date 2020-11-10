@@ -16,6 +16,8 @@ namespace ZPLForge.Configuration
 
             public static class Label
             {
+                public static int PositionX = 0;
+                public static int PositionY = 0;
                 public static int BlackMarkOffset = 0;
                 public static bool ReversePrintingColors = false;
                 public static int Quantity = 1;

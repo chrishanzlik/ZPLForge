@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ZPLForge.XmlSerialization.Helpers
+namespace ZPLForge.XmlSerialization
 {
     internal static class VersionProvider
     {

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0-beta</Version>
+    <Version>1.0.0</Version>
     <Authors>Christopher Hanzlik</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>Copyright (c) 2020 Christopher Hanzlik</Copyright>
@@ -12,11 +12,12 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/chrishanzlik/ZPLForge</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/chrishanzlik/ZPLForge</RepositoryUrl>
-	<PackageTags>ZPL Label Printing Zebra Builder ZPLForge Zebra-Programming-Langauge Pricetag Tags</PackageTags>
+	<PackageTags>ZPL ZPL2 Label Printing Zebra Builder ZPLForge</PackageTags>
 	<RepositoryType>Git</RepositoryType>
 	<PackageIcon>icon.png</PackageIcon>
 	<Description>Library for generating ZPL code</Description>
 	<PackageLicenseFile></PackageLicenseFile>
+	<PackageReleaseNotes>First release version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

@@ -14,6 +14,9 @@ namespace ZPLForge
     /// </summary>
     public class Label : ILabel, IZplGenerator
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Label" /> class with default values from <see cref="ZPLForgeDefaults.Elements.Label"/>.
+        /// </summary>
         public Label()
         {
             BlackMarkOffset = ZPLForgeDefaults.Elements.Label.BlackMarkOffset;
@@ -34,31 +37,71 @@ namespace ZPLForge
         }
 
 
-
+        /// <inheritdoc />
         public int? MediaLength { get; set; }
+
+        /// <inheritdoc />
         public MediaTracking? MediaTracking { get; set; }
+
+        /// <inheritdoc />
         public int? PrintWidth { get; set; }
+
+        /// <inheritdoc />
         public PrintMode? PrintMode { get; set; }
+
+        /// <inheritdoc />
         public int BlackMarkOffset { get; set; }
 
+        /// <inheritdoc />
         public MediaType? MediaType { get; set; }
+
+        /// <inheritdoc />
         public bool ReversePrintingColors { get; set; }
+
+        /// <inheritdoc />
         public ZebraEncoding Encoding { get; set; }
+
+        /// <inheritdoc />
         public List<ILabelContent> Content { get; set; }
 
+        /// <inheritdoc />
         public PrintSpeed PrintSpeed { get; set; }
+
+        /// <inheritdoc />
         public SlewSpeed SlewSpeed { get; set; }
+
+        /// <inheritdoc />
         public BackfeedSpeed BackfeedSpeed { get; set; }
 
+        /// <inheritdoc />
         public int Quantity { get; set; }
+
+        /// <inheritdoc />
         public int PauseAndCutValue { get; set; }
+
+        /// <inheritdoc />
         public bool OverridePauseCount { get; set; }
+
+        /// <inheritdoc />
         public int ReplicatesOfEachSerialNumber { get; set; }
+
+        /// <inheritdoc />
         public bool CutOnError { get; set; }
+
+        /// <inheritdoc />
         public int? MediaDarknessLevel { get; set; }
+
+        /// <inheritdoc />
         public int PositionX { get; set; }
+
+        /// <inheritdoc />
         public int PositionY { get; set; }
 
+        /// <summary>
+        /// Allows implicit string conversion for the <see cref="Label"/> class.
+        /// This internally triggers ZPL generation.
+        /// </summary>
+        /// <param name="label"><see cref="Label"/> to convert.</param>
         public static implicit operator string(Label label) => label.ToString();
 
         /// <summary>
@@ -72,6 +115,7 @@ namespace ZPLForge
             return builder.ToString();
         }
 
+        /// <inheritdoc />
         StringBuilder IZplGenerator.GenerateZpl(StringBuilder builder)
         {
             builder.Append(ZPLCommand.XA());

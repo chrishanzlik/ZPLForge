@@ -7,10 +7,13 @@ using ZPLForge.Configuration;
 namespace ZPLForge
 {
     /// <summary>
-    /// Base class for label contet, defined as elements.
+    /// Base class for <see cref="Label"/> contet, defined as label element.
     /// </summary>
     public abstract class LabelContent : ILabelContent, IZplGenerator
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LabelContent" /> class with default values from <see cref="ZPLForgeDefaults.Elements"/>.
+        /// </summary>
         protected LabelContent()
         {
             PositionX = ZPLForgeDefaults.Elements.PositionX;
@@ -19,11 +22,20 @@ namespace ZPLForge
             FieldReversePrint = ZPLForgeDefaults.Elements.FieldReversePrint;
         }
 
+        /// <inheritdoc />
         public int PositionX { get; set; }
+
+        /// <inheritdoc />
         public int PositionY { get; set; }
+
+        /// <inheritdoc />
         public FieldOrigin FieldOrigin { get; set; }
+
+        /// <inheritdoc />
         public bool FieldReversePrint { get; set; }
 
+
+        /// <inheritdoc />
         protected virtual StringBuilder GenerateZpl(StringBuilder builder)
         {
             builder.Append(ZPLCommand.FO(PositionX, PositionY, FieldOrigin));
@@ -34,11 +46,13 @@ namespace ZPLForge
             return builder;
         }
 
+        /// <inheritdoc />
         StringBuilder IZplGenerator.GenerateZpl(StringBuilder builder)
         {
             return GenerateZpl(builder);
         }
 
+        /// <inheritdoc />
         public override string ToString()
         {
             return GenerateZpl(new StringBuilder()).ToString();

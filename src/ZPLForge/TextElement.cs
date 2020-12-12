@@ -7,10 +7,13 @@ using ZPLForge.Configuration;
 namespace ZPLForge
 {
     /// <summary>
-    /// To be addeded.
+    /// Represents a text on the <see cref="Label"/>.
     /// </summary>
     public class TextElement : LabelContent, IText
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextElement" /> class with default values from <see cref="ZPLForgeDefaults.Elements.Text"/>.
+        /// </summary>
         public TextElement()
         {
             FontOrientation = ZPLForgeDefaults.Elements.Text.FontOrientation;
@@ -22,17 +25,38 @@ namespace ZPLForge
             BlockAlignment = ZPLForgeDefaults.Elements.Text.BlockAlignment;
         }
 
+        /// <inheritdoc />
         public string Content { get; set; }
+
+        /// <inheritdoc />
         public int? CharHeight { get; set; }
+
+        /// <inheritdoc />
         public int? CharWidth { get; set; }
+
+        /// <inheritdoc />
         public Orientation FontOrientation { get; set; }
+
+        /// <inheritdoc />
         public Font FontStyle { get; set; }
+
+        /// <inheritdoc />
         public bool BlockMode { get; set; }
+
+        /// <inheritdoc />
         public int BlockWidth { get; set; }
+
+        /// <inheritdoc />
         public int BlockLines { get; set; }
+
+        /// <inheritdoc />
         public int BlockLineSpace { get; set; }
+
+        /// <inheritdoc />
         public BlockAlignment BlockAlignment { get; set; }
 
+
+        /// <inheritdoc />
         protected override StringBuilder GenerateZpl(StringBuilder builder)
         {
             base.GenerateZpl(builder);

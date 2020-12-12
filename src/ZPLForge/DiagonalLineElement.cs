@@ -7,10 +7,13 @@ using ZPLForge.Configuration;
 namespace ZPLForge
 {
     /// <summary>
-    /// To be added.
+    /// Represents a diagonal line on the <see cref="Label"/>.
     /// </summary>
     public class DiagonalLineElement : LabelContent, IDiagonalLine
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DiagonalLineElement" /> class with default values from <see cref="ZPLForgeDefaults.Elements.DiagonalLine"/>.
+        /// </summary>
         public DiagonalLineElement()
         {
             Width = ZPLForgeDefaults.Elements.DiagonalLine.Width;
@@ -20,12 +23,22 @@ namespace ZPLForge
             InverseLeaningDirection = ZPLForgeDefaults.Elements.DiagonalLine.InverseLeaningDirection;
         }
 
+        /// <inheritdoc />
         public int Width { get; set; }
+
+        /// <inheritdoc />
         public int Height { get; set; }
+
+        /// <inheritdoc />
         public int BorderThickness { get; set; }
+
+        /// <inheritdoc />
         public LabelColor BorderColor { get; set; }
+
+        /// <inheritdoc />
         public bool InverseLeaningDirection { get; set; }
 
+        /// <inheritdoc />
         protected override StringBuilder GenerateZpl(StringBuilder builder)
         {
             base.GenerateZpl(builder);

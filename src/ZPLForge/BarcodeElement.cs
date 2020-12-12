@@ -8,10 +8,13 @@ using ZPLForge.Configuration;
 namespace ZPLForge
 {
     /// <summary>
-    /// To be added.
+    /// Represents a barcode on the <see cref="Label"/>.
     /// </summary>
     public class BarcodeElement : LabelContent, IBarcode
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BarcodeElement" /> class with default values from <see cref="ZPLForgeDefaults.Elements.Barcode"/>.
+        /// </summary>
         public BarcodeElement()
         {
             BarcodeType = ZPLForgeDefaults.Elements.Barcode.BarcodeType;
@@ -26,32 +29,43 @@ namespace ZPLForge
             Mod43CheckDigit = ZPLForgeDefaults.Elements.Barcode.Mod43CheckDigit;
         }
 
+        /// <inheritdoc />
         public string Content { get; set; }
+
+        /// <inheritdoc />
         public BarcodeType BarcodeType { get; set; }
+
+        /// <inheritdoc />
         public Orientation BarcodeOrientation { get; set; }
+
+        /// <inheritdoc />
         public int? Height { get; set; }
+
+        /// <inheritdoc />
         public bool PrintInterpretationLine { get; set; }
+
+        /// <inheritdoc />
         public bool PrintInterpretationLineAboveCode { get; set; }
 
+        /// <inheritdoc />
         public ModuleWidth ModuleWidth { get; set; }
+
+        /// <inheritdoc />
         public BarDistance WideBarToNarrowBar { get; set; }
+
+        /// <inheritdoc />
         public int FieldHeight { get; set; }
 
-        /// <summary>
-        /// Only applicable on Code128
-        /// </summary>
+        /// <inheritdoc />
         public bool UCCCheckDigit { get; set; }
 
-        /// <summary>
-        /// Only applicable on UPC-A
-        /// </summary>
+        /// <inheritdoc />
         public bool PrintCheckDigit { get; set; }
 
-        /// <summary>
-        /// Only applicable on Code39
-        /// </summary>
+        /// <inheritdoc />
         public bool Mod43CheckDigit { get; set; }
 
+        /// <inheritdoc />
         protected override StringBuilder GenerateZpl(StringBuilder builder)
         {
             base.GenerateZpl(builder);

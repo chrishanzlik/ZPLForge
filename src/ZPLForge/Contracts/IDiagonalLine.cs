@@ -7,9 +7,24 @@ namespace ZPLForge.Contracts
     /// </summary>
     public interface IDiagonalLine : ILabelContent
     {
+        /// <summary>
+        /// Gets or sets the width in dots.
+        /// </summary>
         int Width { get; set; }
+
+        /// <summary>
+        /// Gets or sets the height in dots.
+        /// </summary>
         int Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the border thickness in dots.
+        /// </summary>
         int BorderThickness { get; set; }
+
+        /// <summary>
+        /// Gets or sets the border-color.
+        /// </summary>
         LabelColor BorderColor { get; set; }
 
         /// <summary>

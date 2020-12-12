@@ -7,6 +7,9 @@ namespace ZPLForge.Contracts
     /// </summary>
     public interface IQrCode : ILabelContent
     {
+        /// <summary>
+        /// Gets or sets the qr code content.
+        /// </summary>
         string Content { get; set; }
 
         /// <summary>
@@ -27,6 +30,9 @@ namespace ZPLForge.Contracts
         /// </summary>
         ErrorCorrection ErrorCorrection { get; set; }
 
+        /// <summary>
+        /// Gets or sets the mask value. Allowed values are from 0 to 7.
+        /// </summary>
         int MaskValue { get; set; }
     }
 }

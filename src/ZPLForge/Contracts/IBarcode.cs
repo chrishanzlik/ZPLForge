@@ -7,11 +7,26 @@ namespace ZPLForge.Contracts
     /// </summary>
     public interface IBarcode : ILabelContent
     {
+        /// <summary>
+        /// Gets or sets the barcodes content.
+        /// </summary>
         string Content { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the barcode. E.g. Code128
+        /// </summary>
 
         BarcodeType BarcodeType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the barcode orientation.
+        /// </summary>
+
         Orientation BarcodeOrientation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the barcode height in dots.
+        /// </summary>
 
         int? Height { get; set; }
 

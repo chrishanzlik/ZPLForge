@@ -3,15 +3,23 @@ using ZPLForge.Common;
 
 namespace ZPLForge.Builders
 {
+    /// <summary>
+    /// Builder class for UPC-A barcodes.
+    /// </summary>
     public class UPCABarcodeBuilder : BarcodeBuilderBase<UPCABarcodeBuilder>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UPCABarcodeBuilder" /> class.
+        /// </summary>
         internal UPCABarcodeBuilder()
         {
 
         }
 
+        /// <inheritdoc />
         protected override BarcodeType Type => BarcodeType.UPCA;
 
+        /// <inheritdoc />
         protected override bool ValidateContent(string content, out Exception error)
         {
             error = null;
@@ -34,6 +42,10 @@ namespace ZPLForge.Builders
             return true;
         }
 
+        /// <summary>
+        /// After this method was called, the check digit is not printed anymore.
+        /// </summary>
+        /// <returns>The builder instance.</returns>
         public UPCABarcodeBuilder DisableCheckDigit()
         {
 

@@ -14,6 +14,7 @@ namespace ZPLForge.XmlSerialization
             new TypeMap("DiagonalLine", typeof(IDiagonalLine), typeof(DiagonalLineXmlNode), typeof(DiagonalLineElement)),
             new TypeMap("Ellipse", typeof(IEllipse), typeof(EllipseXmlNode), typeof(EllipseElement)),
             new TypeMap("QrCode", typeof(IQrCode), typeof(QrCodeXmlNode), typeof(QrCodeElement)),
+            new TypeMap("DataMatrix", typeof(IDataMatrix), typeof(DataMatrixXmlNode), typeof(DataMatrixElement)),
             new TypeMap("Rectangle", typeof(IRectangle), typeof(RectangleXmlNode), typeof(RectangleElement)),
             new TypeMap("Text", typeof(IText), typeof(TextXmlNode), typeof(TextElement)),
             new TypeMap("Image", typeof(IImage), typeof(ImageXmlNode), typeof(ImageElement)),

@@ -89,6 +89,14 @@ namespace ZPLForge.Configuration
                 public static ErrorCorrection ErrorCorrection = ErrorCorrection.HighReliability;
                 public static int MaskValue = 7;
             }
+            public static class DataMatrix
+            {
+                public static DataMatrixErrorCorrection ErrorCorrection = DataMatrixErrorCorrection.ECC_200;
+                public static DataMatrixFormat Format = DataMatrixFormat.ISO256;
+                public static char EscapeCharacter = '~';
+                public static DataMatrixAspectRatio AspectRatio = DataMatrixAspectRatio.Square;
+            }
+
 
             public static class Image
             {

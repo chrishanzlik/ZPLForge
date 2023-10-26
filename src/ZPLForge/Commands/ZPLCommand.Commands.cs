@@ -31,6 +31,9 @@ namespace ZPLForge.Commands
         public static ZPLCommand BY(int width, double wideToNarrow, int height)
             => new ZPLCommand("^BY", width, wideToNarrow.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture), height);
 
+        public static ZPLCommand BX(int dimensionalHeight, DataMatrixErrorCorrection errorCorrection, int columnsToEncode, int rowsToEndode, DataMatrixFormat format, char escapeCharacter, DataMatrixAspectRatio AspectRatio)
+            => new ZPLCommand("^BX", 'N', dimensionalHeight, (int)errorCorrection, columnsToEncode, rowsToEndode, (int)format, escapeCharacter, (int)AspectRatio);
+
         public static ZPLCommand CI(ZebraEncoding encoding)
             => new ZPLCommand("^CI", (int)encoding);
 
